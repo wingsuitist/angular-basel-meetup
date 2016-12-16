@@ -1,1 +1,4 @@
-# angular-basel-meetup
+# Angular Basel Meetup Slides
+
+Usage:
+reveal-md ./
