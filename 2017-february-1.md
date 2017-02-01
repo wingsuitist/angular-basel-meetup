@@ -79,6 +79,21 @@ npm start
 
 ---
 
+## Please share your insight
+
+Wanted topics:
+
+* angular universal
+* MEAN Stack
+* ngUpgrade
+* Translations
+* Lazy Loading / Routing
+* RxJS
+* Redux, ngrx
+* ... AOT, Material,
+
+---
+
 ## Demo - Angular + Firebase
 
 * Please if you created anything - share it.
