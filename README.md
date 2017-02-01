@@ -1,4 +1,4 @@
 # Angular Basel Meetup Slides
 
 Usage:
-reveal-md ./
+sh present.sh
