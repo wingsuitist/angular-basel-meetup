@@ -86,11 +86,10 @@ Wanted topics:
 * angular universal
 * MEAN Stack
 * ngUpgrade
-* Translations
 * Lazy Loading / Routing
 * RxJS
 * Redux, ngrx
-* ... AOT, Material,
+* ... AOT, Material, Translations
 
 ---
 

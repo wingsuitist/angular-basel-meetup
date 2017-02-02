@@ -1,0 +1,152 @@
+<!doctype html>
+<html lang="en">
+    <head><base href="https://wingsuitist.github.io/angular-basel-meetup/">
+        <meta charset="utf-8">
+        <title>reveal-md</title>
+        <link rel="stylesheet" href="css/reveal.css">
+        <link rel="stylesheet" href="theme/letsboot-sky.css" id="theme">
+        <!-- For syntax highlighting -->
+        <link rel="stylesheet" href="lib/css/github.css">
+
+        <!-- If the query includes 'print-pdf', use the PDF print sheet -->
+        <script>
+          document.write( '<link rel="stylesheet" href="css/print/' + ( window.location.search.match( /print-pdf/gi ) ? 'pdf' : 'paper' ) + '.css" type="text/css" media="print">' );
+        </script>
+    </head>
+    <body>
+
+        <div class="reveal">
+            <div class="slides"><section ><section data-markdown><script type="text/template">## Angular Meetup Basel
+
+### Welcome
+
+<img src="assets/angular2-basel.png" style="height:200px">
+</script></section><section data-markdown><script type="text/template">
+### Thank you Magnolia for the amazing room!
+<img src="https://www.magnolia-cms.com/.resources/corporate-website-2015/webresources/img/logo/magnolia_logo.png" style="height:100px">
+</script></section><section data-markdown><script type="text/template">
+## Agenda
+
+* Shoutouts, News, announcements
+* Presentations, demos - Angular and Firebase
+* Knowledge exchange, 15-20 minutes moderated
+* Networking
+
+</script></section><section data-markdown><script type="text/template">
+## Shoutouts / News
+
+* Jobs, Projects?
+* Meetups, Events, Trainings?
+* News?
+</script></section><section data-markdown><script type="text/template">
+## Meetup News
+
+* [Check out About Page](https://www.meetup.com/Angular-Basel/about/)
+* [Discussion Forum](https://www.meetup.com/Angular-Basel/messages/boards/thread/50557200)
+* [T-Shirt Raffle](http://www.letsboot.com/meetup-raffle)
+</script></section><section data-markdown><script type="text/template">
+## Next Meetup
+
+* Angular 2 and .Net Backend
+* !! Please promote Meetup !!
+</script></section><section data-markdown><script type="text/template">
+## Universal-Cli
+
+```bash
+npm -g install universal-cli
+ung new project --universal
+cd project
+npm start
+```
+
+> ung serve start dev mode, npm start starts universal
+</script></section><section data-markdown><script type="text/template">
+## Angular Community News
+
+* [AngularJS == Angular 1, Angular == Angular 2,4,5...](http://angularjs.blogspot.ch/2017/01/branding-guidelines-for-angular-and.html)
+* [Jazoon with Angular Event](http://jazoon.com/)
+
+</script></section><section data-markdown><script type="text/template">
+### [Angular 2.3.x](http://angularjs.blogspot.ch/2016/12/angular-230-now-available.html)
+
+* [Angular Language Service - Template Completion](https://github.com/angular/vscode-ng-language-service)
+* Components can inherit from another component
+* Better error reporting - stack trace
+* many fixes
+
+### [Angular 2.4.x](http://angularjs.blogspot.ch/2016/12/angular-240-now-available.html)
+
+* RxJS 5 dependency update$
+* many fixes
+</script></section></section><section  data-markdown><script type="text/template">
+## Please share your insight
+
+Wanted topics:
+
+* angular universal
+* MEAN Stack
+* ngUpgrade
+* Lazy Loading / Routing
+* RxJS
+* Redux, ngrx
+* ... AOT, Material, Translations
+</script></section><section ><section data-markdown><script type="text/template">
+## Demo - Angular + Firebase
+
+* Please if you created anything - share it.
+</script></section><section data-markdown><script type="text/template">
+# Let's party :-)
+
+<img src="https://media.makeameme.org/created/networking.jpg">
+</script></section></section></div>
+        </div>
+
+        <script src="lib/js/head.min.js"></script>
+        <script src="js/reveal.js"></script>
+
+        <script>
+            function extend() {
+              var target = {};
+              for (var i = 0; i < arguments.length; i++) {
+                var source = arguments[i];
+                for (var key in source) {
+                  if (source.hasOwnProperty(key)) {
+                    target[key] = source[key];
+                  }
+                }
+              }
+              return target;
+            }
+
+            // Optional libraries used to extend on reveal.js
+            var deps = [
+              { src: 'lib/js/classList.js', condition: function() { return !document.body.classList; } },
+              { src: 'plugin/markdown/marked.js', condition: function() { return !!document.querySelector('[data-markdown]'); } },
+              { src: 'plugin/markdown/markdown.js', condition: function() { return !!document.querySelector('[data-markdown]'); } },
+              { src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+              { src: 'plugin/notes/notes.js', async: true, condition: function() { return !!document.body.classList; } },
+              { src: 'plugin/math/math.js', async: true }
+            ];
+
+            // default options to init reveal.js
+            var defaultOptions = {
+              controls: true,
+              progress: true,
+              history: true,
+              center: true,
+              transition: 'default',
+              dependencies: deps
+            };
+
+            // options from URL query string
+            var queryOptions = Reveal.getQueryHash() || {};
+
+            var options = {};
+            options = extend(defaultOptions, options, queryOptions);
+            Reveal.initialize(options);
+        </script>
+        
+          <script src="/scripts/angular-basel-meetup"></script>
+    </body>
+</html>
+
