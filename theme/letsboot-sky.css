@@ -295,7 +295,7 @@ body {
 
 /* letsboot */
 .reveal {
-  background:url("../assets/letsboot-com.png");
+  background:url("/assets/letsboot-com.png");
   background-position: right top 5px;
   background-size: 20%;
   background-repeat: no-repeat;
