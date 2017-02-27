@@ -33,7 +33,6 @@
 * [The link collection](https://github.com/AngularClass/awesome-angular2)
 * [ng2-translate for languages](https://www.npmjs.com/package/ng2-translate)
 * [swagger for angular 2 backend](https://github.com/nvdnkpr/angular2-swagger-client-generator/blob/master/templates/angular2-service.mustache)
-* 
 
 Slides: https://wingsuitist.github.io/angular-basel-meetup/index.html#/
 
