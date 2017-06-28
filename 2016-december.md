@@ -2,7 +2,7 @@
 
 ### Welcome
 
-<img src="assets/angular2-basel.png" style="height:200px">
+<img src="theme/assets/angular2-basel.png" style="height:200px">
 
 ----
 
@@ -152,15 +152,15 @@ Template Developer |  | Frontend "Developer"
 
 ### UI Libraries
 
-<img src="assets/ngprime.png" style="height:80px; border: 1px solid gray;">
-<img src="assets/material.png" style="height:80px; border: 1px solid gray;">
-<img src="assets/kendo.png" style="height:80px; border: 1px solid gray;">
-<img src="assets/bootstrap.png" style="height:80px; border: 1px solid gray;">
+<img src="theme/assets/ngprime.png" style="height:80px; border: 1px solid gray;">
+<img src="theme/assets/material.png" style="height:80px; border: 1px solid gray;">
+<img src="theme/assets/kendo.png" style="height:80px; border: 1px solid gray;">
+<img src="theme/assets/bootstrap.png" style="height:80px; border: 1px solid gray;">
 
-<img src="assets/fuelui.png" style="height:80px; border: 1px solid gray;">
-<img src="assets/nglightning.svg" style="height:80px; border: 1px solid gray;">
-<img src="assets/onson.png" style="height:80px; border: 1px solid gray;">
-<img src="assets/semantic.jpg" style="height:80px; border: 1px solid gray;">
+<img src="theme/assets/fuelui.png" style="height:80px; border: 1px solid gray;">
+<img src="theme/assets/nglightning.svg" style="height:80px; border: 1px solid gray;">
+<img src="theme/assets/onson.png" style="height:80px; border: 1px solid gray;">
+<img src="theme/assets/semantic.jpg" style="height:80px; border: 1px solid gray;">
 
 ---
 
