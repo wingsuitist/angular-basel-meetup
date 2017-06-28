@@ -20,48 +20,140 @@
 
 ### Welcome
 
-<img src="assets/angular2-basel.png" style="height:200px">
-
+<img src="theme/assets/angular2-basel.png" style="height:200px">
+</script></section><section data-markdown><script type="text/template">
+### Thank you Magnolia for the amazing room!
+<img src="https://www.magnolia-cms.com/.resources/corporate-website-2015/webresources/img/logo/magnolia_logo.png" style="height:100px">
 </script></section><section data-markdown><script type="text/template">
 ## Agenda
 
-* Shoutouts, News, announcements
-* Presentations, demos - Isomorphic JS / Angular Demo
+* Shoutouts announcements
+* Presentations, demos
+* Knowledge exchange
+ * 15-20 minutes moderated
 * Networking
-
 </script></section><section data-markdown><script type="text/template">
+## Code of Conduct
+
+> From Washington DC: It's important.
+
+* We are respectfull, tolerant and helpful.
+* We are open to everyone interested in our topics.
+* We want to promote and help open source.
+</script></section></section><section ><section data-markdown><script type="text/template">
 ## Shoutouts / News
 
 * Jobs, Projects?
 * Meetups, Events, Trainings?
 * News?
 </script></section><section data-markdown><script type="text/template">
-## Angular Tips
+## Angular 4 ?WTF?
 
-* angular-up.com Raffle: letsboot.com/angularup-raffle
-
-Slides: https://wingsuitist.github.io/angular-basel-meetup/index.html#/
+* Angular 2, 3, 4, 5, 6
+* Semantic Versioning
+* Router v3 ==> Router v4 + Angular v4
 </script></section><section data-markdown><script type="text/template">
-## Please share your insight
+## [Angular 2.1.x](http://angularjs.blogspot.ch/2016/10/angular-210-now-available.html)
 
-Wanted topics:
+* preloading of layzloaded modules
+* animations improvements
+</script></section><section data-markdown><script type="text/template">
+## [Angular 2.2.x](http://angularjs.blogspot.ch/2016/11/angular-220-now-available.html)
 
-* Redux, ngrx/store
-* MEAN Stack
-* ngUpgrade
-* Lazy Loading / Routing
-* RxJS
-* Serverless AWS Lamda/Firebase
-* ... AOT, Material, Translations
+* AOT support for @angular/upgrade - AngularJS 1.x upgrade
+* Router improvements for upgrading
+* Smaller AOT output (every version the filesize decreases)
+* Guides for usage with ES5 (why?) and ES2015++
 </script></section></section><section ><section data-markdown><script type="text/template">
-## Demo - Angular + Universal
+## Demo Ionic 2
 
 * Please if you created anything - share it.
 </script></section><section data-markdown><script type="text/template">
+## Using json-server
+
+> Backend in 5 minutes
+
+```bash
+npm -g install json-server
+json-server -w somedata.json
+http://localhost:3000/
+```
+</script></section></section><section ><section data-markdown><script type="text/template">
+# Open Knowledge exchange
+
+* Integration with server
+* UI Library, Component CSS, Global CSS
+* ... ? topics ?
+</script></section><section data-markdown><script type="text/template">
+## Integration with server
+
+* angular/http, observables (rxjs)
+* websockets
+* firebase
+* pouchdb
+* graphql
+* ???
+</script></section><section data-markdown><script type="text/template">
+### UI/CSS Strategy: separate global css
+
+```txt
+
+src/styles.(css|sass|less)
+  You could use basic Bootstrap + Custom styles.
+
+[App] <tag class="some-class">
+  |
+  |_________
+  |         |
+[List]  [Detail] <tag class="some-class">
+
+```
+</script></section><section data-markdown><script type="text/template">
+### UI/CSS Strategy: "rich" components
+
+```txt
+
+[App]
+  ||
+  ||____________________
+  |          |          |
+  |        [md-menu] [md-menu-item]{css}
+  |
+  |
+  |--------[Detail]
+  |         
+[List]  
+  |__________________________
+          |                  |
+       [md-list] <--- [md-list-item]{css}
+
+```
+</script></section><section data-markdown><script type="text/template">
+Global-CSS | vs | Component-CSS
+---|---|---
+Common concept |  | New way
+Easy to understand |  | Less Risk
+Style focussed |  | Component focussed
+Independant |  | Reusability
+"Your Structure" |  | Technical Complexity
+Template Developer |  | Frontend "Developer"
+</script></section><section data-markdown><script type="text/template">
+### UI Libraries
+
+<img src="theme/assets/ngprime.png" style="height:80px; border: 1px solid gray;">
+<img src="theme/assets/material.png" style="height:80px; border: 1px solid gray;">
+<img src="theme/assets/kendo.png" style="height:80px; border: 1px solid gray;">
+<img src="theme/assets/bootstrap.png" style="height:80px; border: 1px solid gray;">
+
+<img src="theme/assets/fuelui.png" style="height:80px; border: 1px solid gray;">
+<img src="theme/assets/nglightning.svg" style="height:80px; border: 1px solid gray;">
+<img src="theme/assets/onson.png" style="height:80px; border: 1px solid gray;">
+<img src="theme/assets/semantic.jpg" style="height:80px; border: 1px solid gray;">
+</script></section></section><section  data-markdown><script type="text/template">
 # Let's party :-)
 
 <img src="https://media.makeameme.org/created/networking.jpg">
-</script></section></section></div>
+</script></section></div>
         </div>
 
         <script src="lib/js/head.min.js"></script>
