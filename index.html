@@ -3,15 +3,11 @@
     <head><base href="https://wingsuitist.github.io/angular-basel-meetup/">
         <meta charset="utf-8">
         <title>reveal-md</title>
-        <link rel="stylesheet" href="css/reveal.css">
-        <link rel="stylesheet" href="theme/letsboot-sky.css" id="theme">
-        <!-- For syntax highlighting -->
-        <link rel="stylesheet" href="lib/css/github.css">
+        <link rel="stylesheet" href="./css/reveal.css">
+        <link rel="stylesheet" href="./theme/letsboot-sky.css" id="theme">
+        <link rel="stylesheet" href="./css/highlight/zenburn.css">
+        <link rel="stylesheet" href="./css/print/paper.css" type="text/css" media="print">
 
-        <!-- If the query includes 'print-pdf', use the PDF print sheet -->
-        <script>
-          document.write( '<link rel="stylesheet" href="css/print/' + ( window.location.search.match( /print-pdf/gi ) ? 'pdf' : 'paper' ) + '.css" type="text/css" media="print">' );
-        </script>
     </head>
     <body>
 
@@ -35,15 +31,11 @@
 * Meetups, Events, Trainings?
 * News?
 </script></section><section data-markdown><script type="text/template">
-## New Trainings:
-
-* Blockchain by Mohamed 01.02.2018: https://www.letsboot.com/blockchain
-* Angular Training with Cedric Spindler 27.02.2018: https://www.letsboot.com/angular
-* React Training with Jonas Bandi 20.03.2018: https://www.letsboot.com/react
-* Camp 2018 after great succes in 2017: https://www.letsboot.com/camp
+## Full-Stack JavaScript Bootcamp
 
 <img src="https://static.wixstatic.com/media/51a518_deebba96861847f99d1aa92f86356e96~mv2.jpg/v1/fill/w_762,h_610,al_c,q_85,usm_0.66_1.00_0.01/51a518_deebba96861847f99d1aa92f86356e96~mv2.webp" width="500px"> 
 
+* https://www.letsboot.com/camp 
 </script></section><section data-markdown><script type="text/template">
 ## Angular Slides: 
 
@@ -60,19 +52,33 @@ Wanted topics:
 * RxJS
 * Serverless AWS Lamda/Firebase
 * ... AOT, Material, Translations
-</script></section></section><section  data-markdown><script type="text/template">
-## xxxx add intro to talk here xxxx
-xxx
-xxx
+</script></section></section><section ><section data-markdown><script type="text/template">
+## End 2 End Testing
+## Continuous Integration
 
-</script></section><section  data-markdown><script type="text/template">
+> Test, Test More, Test Always :-)
+</script></section><section data-markdown><script type="text/template">
+# What will we do:
+
+* Create a minimal app
+* Get some "grip" on the Buttons (Page Object)
+* Build matching End 2 End Tests and run them :-)
+* Put it on gitlab
+* Tell gitlab how to run them on every commit
+</script></section><section data-markdown><script type="text/template">
+## Further Watching/Reading:
+
+* [Testing Driven Development, CI/CD](https://medium.com/letsboot/angular-4-and-testing-angular-cli-gitlab-ci-ng-test-phantomjs-tdd-afc20f50b928)
+* [Continuous Delivery / Deployment with CI/CD](https://medium.com/letsboot/angular-continuous-delivery-deployment-with-gitlab-ci-stage-on-commit-and-prod-on-git-tag-151ce3c74619)
+* [End To End Testing](https://medium.com/letsboot/angular-end-to-end-testing-c3b9950fdd41)
+</script></section></section><section  data-markdown><script type="text/template">
 ### Let's talk
 
 <iframe src="https://giphy.com/embed/26ufbjVtvdCaikoP6" width="900" height="600" frameBorder="0" class="giphy-embed" allowFullScreen></iframe></script></section></div>
         </div>
 
-        <script src="lib/js/head.min.js"></script>
-        <script src="js/reveal.js"></script>
+        <script src="./lib/js/head.min.js"></script>
+        <script src="./js/reveal.js"></script>
 
         <script>
             function extend() {
@@ -90,12 +96,13 @@ xxx
 
             // Optional libraries used to extend on reveal.js
             var deps = [
-              { src: 'lib/js/classList.js', condition: function() { return !document.body.classList; } },
-              { src: 'plugin/markdown/marked.js', condition: function() { return !!document.querySelector('[data-markdown]'); } },
-              { src: 'plugin/markdown/markdown.js', condition: function() { return !!document.querySelector('[data-markdown]'); } },
-              { src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
-              { src: 'plugin/notes/notes.js', async: true, condition: function() { return !!document.body.classList; } },
-              { src: 'plugin/math/math.js', async: true }
+              { src: './lib/js/classList.js', condition: function() { return !document.body.classList; } },
+              { src: './plugin/markdown/marked.js', condition: function() { return !!document.querySelector('[data-markdown]'); } },
+              { src: './plugin/markdown/markdown.js', condition: function() { return !!document.querySelector('[data-markdown]'); } },
+              { src: './plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+              { src: './plugin/zoom-js/zoom.js', async: true },
+              { src: './plugin/notes/notes.js', async: true },
+              { src: './plugin/math/math.js', async: true }
             ];
 
             // default options to init reveal.js
@@ -104,7 +111,7 @@ xxx
               progress: true,
               history: true,
               center: true,
-              transition: 'default',
+              transition: 'default', // none/fade/slide/convex/concave/zoom
               dependencies: deps
             };
 
@@ -113,10 +120,11 @@ xxx
 
             var options = {};
             options = extend(defaultOptions, options, queryOptions);
+        </script>
+
+
+        <script>
             Reveal.initialize(options);
         </script>
-        
-          <script src="/scripts/angular-basel-meetup"></script>
     </body>
 </html>
-
