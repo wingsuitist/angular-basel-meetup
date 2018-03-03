@@ -4,5 +4,5 @@ git checkout gh-pages && \
   sed -i -e 's;<head>;<head><base href="https://wingsuitist.github.io/angular-basel-meetup/">;g' index.html && rm "index.html-e" && \
   git add -A && \
   git commit -m 'static deployment' && \
-  git push origin gh-pages && \
-  git checkout master
+  git push origin gh-pages
+git checkout master
