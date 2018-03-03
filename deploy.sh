@@ -1,7 +1,9 @@
 git checkout gh-pages && \
   git checkout master -- . && \
   reveal-md `ls -r1 *-*.md | head -n 1` --theme theme/letsboot-sky.css --highlightTheme github --static ./  && \
-  sed -i -e 's;<head>;<head><base href="https://wingsuitist.github.io/angular-basel-meetup/">;g' index.html && rm "index.html-e" && \
+  sed -i -e 's;<head>;<head><base href="https://wingsuitist.github.io/angular-basel-meetup/">;g' index.html && \ 
+  sed -i -e 's;_assets/;;g' index.html && \ 
+  rm "index.html-e" && \
   git add -A && \
   git commit -m 'static deployment' && \
   git push origin gh-pages
