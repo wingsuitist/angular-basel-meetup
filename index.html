@@ -1,17 +1,11 @@
-<!doctype html>
-<html lang="en">
-    <head><base href="https://wingsuitist.github.io/angular-basel-meetup/">
-        <meta charset="utf-8">
+Wrote static site to /Users/jonas.felix/code/angular-basel-meetup
+"utf-8">
         <title>reveal-md</title>
-        <link rel="stylesheet" href="css/reveal.css">
-        <link rel="stylesheet" href="theme/letsboot-sky.css" id="theme">
-        <!-- For syntax highlighting -->
-        <link rel="stylesheet" href="lib/css/github.css">
+        <link rel="stylesheet" href="./css/reveal.css">
+        <link rel="stylesheet" href="./_assets/theme/letsboot-sky.css" id="theme">
+        <link rel="stylesheet" href="./css/highlight/zenburn.css">
+        <link rel="stylesheet" href="./css/print/paper.css" type="text/css" media="print">
 
-        <!-- If the query includes 'print-pdf', use the PDF print sheet -->
-        <script>
-          document.write( '<link rel="stylesheet" href="css/print/' + ( window.location.search.match( /print-pdf/gi ) ? 'pdf' : 'paper' ) + '.css" type="text/css" media="print">' );
-        </script>
     </head>
     <body>
 
@@ -92,8 +86,8 @@ Wanted topics:
 </script></section></section></div>
         </div>
 
-        <script src="lib/js/head.min.js"></script>
-        <script src="js/reveal.js"></script>
+        <script src="./lib/js/head.min.js"></script>
+        <script src="./js/reveal.js"></script>
 
         <script>
             function extend() {
@@ -111,12 +105,13 @@ Wanted topics:
 
             // Optional libraries used to extend on reveal.js
             var deps = [
-              { src: 'lib/js/classList.js', condition: function() { return !document.body.classList; } },
-              { src: 'plugin/markdown/marked.js', condition: function() { return !!document.querySelector('[data-markdown]'); } },
-              { src: 'plugin/markdown/markdown.js', condition: function() { return !!document.querySelector('[data-markdown]'); } },
-              { src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
-              { src: 'plugin/notes/notes.js', async: true, condition: function() { return !!document.body.classList; } },
-              { src: 'plugin/math/math.js', async: true }
+              { src: './lib/js/classList.js', condition: function() { return !document.body.classList; } },
+              { src: './plugin/markdown/marked.js', condition: function() { return !!document.querySelector('[data-markdown]'); } },
+              { src: './plugin/markdown/markdown.js', condition: function() { return !!document.querySelector('[data-markdown]'); } },
+              { src: './plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+              { src: './plugin/zoom-js/zoom.js', async: true },
+              { src: './plugin/notes/notes.js', async: true },
+              { src: './plugin/math/math.js', async: true }
             ];
 
             // default options to init reveal.js
@@ -125,7 +120,7 @@ Wanted topics:
               progress: true,
               history: true,
               center: true,
-              transition: 'default',
+              transition: 'default', // none/fade/slide/convex/concave/zoom
               dependencies: deps
             };
 
@@ -134,10 +129,11 @@ Wanted topics:
 
             var options = {};
             options = extend(defaultOptions, options, queryOptions);
+        </script>
+
+
+        <script>
             Reveal.initialize(options);
         </script>
-        
-          <script src="/scripts/angular-basel-meetup"></script>
     </body>
 </html>
-
