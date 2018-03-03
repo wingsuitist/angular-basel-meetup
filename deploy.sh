@@ -6,3 +6,4 @@ git checkout gh-pages && \
   git commit -m 'static deployment' && \
   git push origin gh-pages
 git checkout master
+open "https://wingsuitist.github.io/angular-basel-meetup/index.html#/"
