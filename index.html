@@ -2,11 +2,14 @@
 <html lang="en">
     <head><base href="https://wingsuitist.github.io/angular-basel-meetup/">
         <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
         <title>reveal-md</title>
         <link rel="stylesheet" href="./css/reveal.css">
         <link rel="stylesheet" href="./theme/letsboot-sky.css" id="theme">
         <link rel="stylesheet" href="./css/highlight/zenburn.css">
         <link rel="stylesheet" href="./css/print/paper.css" type="text/css" media="print">
+
 
     </head>
     <body>
@@ -21,10 +24,7 @@
 ## Agenda
 
 *   Shoutouts, News, announcements
-*   Presentations
-    *   Writing Unit Tests for Angular Components (Steffi)
-    *   Use Airtable as Backend for your Angular app (Ben)
-    *   Unit- vs. Integrations- vs. e2e-Tests (Nico)
+*   CSRF with Angular and SpringBoot
 *   Networking
 
 </script></section><section data-markdown><script type="text/template">
@@ -34,7 +34,11 @@
 *   Meetups, Events, Trainings?
 *   News?
 
-</script></section><section data-markdown><script type="text/template">
+<aside class="notes"><ul>
+<li>last meetup for this year</li>
+<li>Videos from Angular Connect online shortly</li>
+</ul>
+</aside></script></section><section data-markdown><script type="text/template">
 ## Angular Slides:
 
 <https://wingsuitist.github.io/angular-basel-meetup/index.html>
@@ -54,32 +58,57 @@ Wanted topics:
 *   How to integrate other libraries into Angular
 
 </script></section></section><section ><section data-markdown><script type="text/template">
-## Writing Unit Tests for Angular Components
+## CSRF with Angular and SpringBoot
+
+Cross-Site Request Forgery (aka XSRF)
+</script></section><section data-markdown><script type="text/template">
+### CSRF - Context
+
+*   HTTP is stateless
+*   preserve session with cookie
+    *   cookie can not be read from script from other domain
+    *   but cookie is submitted for any request going to it's domain, no matter who initiated request
+</script></section><section data-markdown><script type="text/template">
+### CSRF - How it works
+
+*   user is logged into site A and site B (e.g. in different tabs)
+*   site B sends a request to the backend of site A
+    *   cookie from site A gets sent along
+    *   user is considered authenticated
+</script></section><section data-markdown><script type="text/template">
+### CSRF - How to prevent it
+
+*   prove, that request was actually made from site A
+*   send along cookie value as header parameter as well
+    *   only possible for scripts of site A
+    *   if header and cookie don't match -> reject at backend
+*   builds on Same-origin policy
+</script></section><section data-markdown><script type="text/template">
+### SpringBoot
+
+*   enabled per default when security is enabled
+*   sets Cookie with name X-XSRF-TOKEN on every request
+*   updates token on each request
+
+<aside class="notes"><p>changing token on each request adds some more security, but not much</p>
+</aside></script></section><section data-markdown><script type="text/template">
+### Angular
+
+if there is a cookie _X-XSRF-TOKEN_, it's value is attached as a header _X-XSRF-Token_
 
 </script></section><section data-markdown><script type="text/template">
-### Background
+### Pitfalls
 
-*   frontend dev
-*   experience in unit testing in Java and JavaScript (but not in Angular)
-*   first own project, starting from scratch
-</script></section><section data-markdown><script type="text/template">
-### Motivation for this presentation
-*   error messages hard to understand at first -> give you a headstart
-*   understand it better myself
-</script></section><section data-markdown><script type="text/template">
-### Tips
+*   SpringBoot makes Token HTTP-Only per default
+*   custom header interceptor
 
-*   test right from the start
-*   have tests running while developing
-*   continuous integration
-*   ask yourself repeatedly: what do I actually want to test?
-*   isolate - mock away as much as possible
-*   practice
+</script></section><section data-markdown><script type="text/template">
+### Links
+
+*   Video: [Cross Site Request Funkery Securing Your Angular Apps From Evil Doers | Dave Smith](https://youtu.be/9inczw6qtpY)
+*   Article: [Angular2 and Spring — fighting CSRF in the wild.](https://medium.com/spektrakel-blog/angular2-and-spring-a-friend-in-security-need-is-a-friend-against-csrf-indeed-9f83eaa9ca2e)
+*   Demo based on: [A Guide to CSRF](https://www.baeldung.com/spring-security-csrf)
 </script></section></section><section  data-markdown><script type="text/template">
-## Use Airtable as Backend for your Angular app
-</script></section><section  data-markdown><script type="text/template">
-## Unit- vs. Integrations- vs. e2e-Tests
-</script></section><section  data-markdown><script type="text/template">
 ### Let's talk
 
 <iframe src="https://giphy.com/embed/26ufbjVtvdCaikoP6" width="900" height="600" frameBorder="0" class="giphy-embed" allowFullScreen></iframe>
@@ -133,7 +162,7 @@ Wanted topics:
 
 
         <script>
-            Reveal.initialize(options);
+          Reveal.initialize(options);
         </script>
     </body>
 </html>
